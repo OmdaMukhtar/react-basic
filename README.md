@@ -1,12 +1,13 @@
 # Topics :
 ## How to use Hooks
+    [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
 ## How to call api
 ## Router in reactjs
 ## Handling the events
 ## Normal function vs arraw functions
     `
     ======== Normal function ==========================
-    
+
     constructor(props)
     {
         super(props);
