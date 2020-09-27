@@ -1,11 +1,14 @@
 # Topics :
 ## How to use Hooks
     [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
+* useState
+* useEffect
+
 ## How to call api
 ## Router in reactjs
 ## Handling the events
 ## Normal function vs arraw functions
-    `
+    `javascript
     ======== Normal function ==========================
 
     constructor(props)
