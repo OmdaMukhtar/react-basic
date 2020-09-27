@@ -4,15 +4,15 @@
 * useState
 * useEffect
 
-### styles use css
-`import './style.css`
-style.css
+* ### styles use css
+- `import './style.css`
+- style.css
 `.btn{
     background-color: #0000ff;
     color:#ffffff;
 }
 `
-### styles use bootstrap from npm 
+* ### styles use bootstrap from npm 
 `import 'bootstrap/dist/css/bootstrap.css';`
 
 ## How to call api
