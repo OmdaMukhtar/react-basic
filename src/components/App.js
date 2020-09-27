@@ -10,7 +10,14 @@ class App extends React.Component
         this.state = {title: props.title};
     }
 
+    getData =()=>{
+        return {
+            title: "onthing yet omda"
+        }
+    }
+
     handleClick = ()=>{
+        this.setState(this.getData);
         console.log("clicked me..", this.state);
     }
 

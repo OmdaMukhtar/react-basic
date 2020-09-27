@@ -4,6 +4,9 @@
 * useState
 * useEffect
 
+### styles use bootstrap from npm 
+`import 'bootstrap/dist/css/bootstrap.css';`
+
 ## How to call api
 ## Router in reactjs
 ## Handling the events
