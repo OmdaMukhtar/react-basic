@@ -4,6 +4,7 @@ import React from "react";
 // function App({title}){
 //     return <div><h1>{title}</h1></div>
 // }
+import '../assets/style.css';
 
 class App extends React.Component
 {
@@ -13,8 +14,14 @@ class App extends React.Component
         this.state = {title: props.title};
     }
 
+    handleClick() {
+        console.log("clicked me..");
+    }
+
     render() {
-        return <div><h1>{this.state.title}</h1></div>
+        return <div>
+            <button className="btn" onClick={this.handleClick}>Click Me</button>
+        </div>
     }
 }
 
