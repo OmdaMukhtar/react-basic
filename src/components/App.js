@@ -1,11 +1,6 @@
 
 import React from "react";
 
-// function App({title}){
-//     return <div><h1>{title}</h1></div>
-// }
-import '../assets/style.css';
-
 class App extends React.Component
 {
     constructor(props)
@@ -14,13 +9,13 @@ class App extends React.Component
         this.state = {title: props.title};
     }
 
-    handleClick() {
-        console.log("clicked me..");
+    handleClick = ()=>{
+        console.log("clicked me..", this.state);
     }
 
     render() {
-        return <div>
-            <button className="btn" onClick={this.handleClick}>Click Me</button>
+        return <div className="justify-content-center container">
+            <button className="btn btn-success" onClick={this.handleClick}>Click Me</button>
         </div>
     }
 }
