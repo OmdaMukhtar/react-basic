@@ -3,7 +3,8 @@
 ## Get start with react
 * JSX
 
-`react
+`javascript
+
 import ReactDOM from "react-dom";
 import React from "react";
 
@@ -13,12 +14,14 @@ ReactDOM.render(
     element,
     document.getElementById('root')
 );
+
 `
 
 1. ### styles use css
 - `import './style.css`
 - style.css
-`.btn{
+`css
+.btn{
     background-color: #0000ff;
     color:#ffffff;
 }
