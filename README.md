@@ -15,10 +15,10 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-`
+```
 
 1. ### styles use css
-- `import './style.css`
+- ```import './style.css```
 - style.css
 ``css
 .btn{
@@ -27,7 +27,7 @@ ReactDOM.render(
 }
 `
 2. ### styles use bootstrap from npm 
-```import 'bootstrap/dist/css/bootstrap.css';
+```import 'bootstrap/dist/css/bootstrap.css'```;
 
 
 ## Use Form request
@@ -46,8 +46,8 @@ ReactDOM.render(
 ## Handling the events
 ## Normal function vs arraw functions
 
-```javascript
 ======== Normal function ==========================
+```javascript
 
 constructor(props)
 {
@@ -59,14 +59,14 @@ constructor(props)
 handleClick() {
     console.log("clicked me..", this.state);
 }
+```
 
 =========== or use arraw function like so ===========
-
+```javascript
 handleClick = ()=>{
     console.log("clicked me..", this.state);
 }
-
-`
+```
 
 ## Lifecycle 
 ### common :
