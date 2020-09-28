@@ -3,7 +3,7 @@
 ## Get start with react
 * JSX
 
-`javascript
+```javascript
 
 import ReactDOM from "react-dom";
 import React from "react";
@@ -20,7 +20,7 @@ ReactDOM.render(
 1. ### styles use css
 - `import './style.css`
 - style.css
-`css
+``css
 .btn{
     background-color: #0000ff;
     color:#ffffff;
@@ -45,25 +45,25 @@ ReactDOM.render(
 ## Router in reactjs
 ## Handling the events
 ## Normal function vs arraw functions
-    `javascript
-    ======== Normal function ==========================
+```javascript
+======== Normal function ==========================
 
-    constructor(props)
-    {
-        super(props);
-        this.state = {title: props.title};
-        this.handleClick = this.handleClick.bind(this);
-    }
+constructor(props)
+{
+    super(props);
+    this.state = {title: props.title};
+    this.handleClick = this.handleClick.bind(this);
+}
 
-    handleClick() {
-        console.log("clicked me..", this.state);
-    }
+handleClick() {
+    console.log("clicked me..", this.state);
+}
 
-    =========== or use arraw function like so ===========
+=========== or use arraw function like so ===========
 
-    handleClick = ()=>{
-        console.log("clicked me..", this.state);
-    }
+handleClick = ()=>{
+    console.log("clicked me..", this.state);
+}
 
 `
 
