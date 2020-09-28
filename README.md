@@ -1,10 +1,21 @@
 # Topics :
-## How to use Hooks
-    [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
-* useState
-* useEffect
 
-* ### styles use css
+## Get start with react
+* JSX
+
+`react
+import ReactDOM from "react-dom";
+import React from "react";
+
+const element = <h2>Hello Snso team </h2>
+
+ReactDOM.render(
+    element,
+    document.getElementById('root')
+);
+`
+
+1. ### styles use css
 - `import './style.css`
 - style.css
 `.btn{
@@ -12,10 +23,20 @@
     color:#ffffff;
 }
 `
+2. ### styles use bootstrap from npm 
+`import 'bootstrap/dist/css/bootstrap.css';`
+
+
 ## Use Form request
 
-* ### styles use bootstrap from npm 
-`import 'bootstrap/dist/css/bootstrap.css';`
+
+## React Context
+
+## How to use Hooks
+* [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
+* The most important thing in the hooks is these two methods :
+* useState
+* useEffect
 
 ## How to call api
 ## Router in reactjs
