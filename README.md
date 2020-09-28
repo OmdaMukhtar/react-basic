@@ -27,7 +27,7 @@ ReactDOM.render(
 }
 `
 2. ### styles use bootstrap from npm 
-`import 'bootstrap/dist/css/bootstrap.css';`
+```import 'bootstrap/dist/css/bootstrap.css';
 
 
 ## Use Form request
@@ -45,6 +45,7 @@ ReactDOM.render(
 ## Router in reactjs
 ## Handling the events
 ## Normal function vs arraw functions
+
 ```javascript
 ======== Normal function ==========================
 
