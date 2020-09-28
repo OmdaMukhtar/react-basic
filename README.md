@@ -54,6 +54,12 @@
 * `render`
 * `getSnapshotBeforeUpdate`
 
+# My thought
+- by using React Hook I thing there is no need for a statage mangement ?!
+- Componenet functional base it's better than componenet class base ?
+- Your thought reactjs vs vuejs
+- Redux vs Vuex
+
 
 # References :
 - [Net Ninga](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
