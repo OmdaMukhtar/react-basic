@@ -85,6 +85,9 @@ handleClick = ()=>{
 - Your thought reactjs vs vuejs
 - Redux vs Vuex
 
+# Something that i dit't find a time to know it:
+- Redux
+- What is .tsx
 
 # References :
 - [Net Ninga](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
