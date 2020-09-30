@@ -285,7 +285,7 @@
                 const [songs, setSongs] = useState([
                     {id:1, name: 'Otwel'},
                     {id:2, name: 'Omda'},
-                    {id:3, name: 'Nahid'},
+                    {id:3, name: 'Jhon'},
                 ]);
 
                 const [age, setAge] = useState(10);
