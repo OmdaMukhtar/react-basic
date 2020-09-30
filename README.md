@@ -16,59 +16,60 @@
 
 1. ## styles use css
     - ### Through style file
-    ```js
-        import './style.css
-    ```
+        ```js
+            import './style.css
+        ```
     - ### Style.css
-    ```css
-        .btn{
-            background-color: #0000ff;
-            color:#ffffff;
-        }
-    ```
+        ```css
+            .btn{
+                background-color: #0000ff;
+                color: #ffffff;
+            }
+        ```
 
 2. ## Styles use bootstrap from npm 
+    - npm install bootstrap
     ```js
-    import 'bootstrap/dist/css/bootstrap.css';
+        import 'bootstrap/dist/css/bootstrap.css';
     ```
 
 3. ## Components and Props
     - ### Through componant class base
-    ```js
-    class Welcome extends React.Component {
-        render() {
-        return <h1>Hello, {this.props.nackName}</h1>;
-        }
-    }
-    ```
+        ```js
+            class Welcome extends React.Component {
+                render() {
+                    return <h1>Hello, {this.props.nackName}</h1>;
+                }
+            }
+        ```
 
     - ### Through functional component base
-    ```js
-    function Welcome(props) {
-        return <h1>{props.nackName}</h1>
-    }
-    ```
+        ```js
+            function Welcome(props) {
+                return <h1>{props.nackName}</h1>
+            }
+        ```
 
 4. ## Lifecycle 
-    ### common :
+    - ### common :
         * componentDidMount
         * componentWillUnmount
 
-    ### rest of the list
+    - ### rest of the list
         * componentDidUpdate
         * shouldComponentUpdate
         * render
         * getSnapshotBeforeUpdate
 
 
-    #### Lifecycle Methods to a Class
-    ```js
+    - #### Lifecycle Methods to a Class
+        ```js
 
-    ```
-    #### Lifecycle Methods to a Functional Component
-    ```js
+        ```
+    - #### Lifecycle Methods to a Functional Component
+        ```js
 
-    ```
+        ```
 
 5. ### Handling Events
     - #### Through Class Component
@@ -84,7 +85,6 @@
             console.log("clicked me..", this.state);
         }
     ```
-
     =========== or use arraw function like so ===========
     ```js
         handleClick = ()=>{
@@ -152,7 +152,7 @@
         }
     ```
     - Exercies :
-        convert newform component class to the function component class
+        convert newform component class to the functional component class
 
 6. ## Router in reactjs
 ```js
@@ -178,7 +178,6 @@
     - Redux
     - What is .tsx
     - How to call api
-    - Use Form request
 
 
 ### References :
