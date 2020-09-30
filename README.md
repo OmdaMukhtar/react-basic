@@ -118,7 +118,7 @@
         }
     ```
 
-7. ## Forms
+6. ## Forms
     ```js
         class NameForm extends React.Component {
             constructor(props) {
@@ -154,15 +154,18 @@
     - Exercies :
         convert newform component class to the functional component class
 
-6. ## Router in reactjs
-```js
+7. ## Router in reactjs
+    ```js
 
-```
+    ```
 
 
-## React Context
+8. ## React Context
+    ```js
 
-## How to use Hooks
+    ```
+
+9. ## How to use Hooks
     * [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
     * The most important thing in the hooks is these two methods :
     * useState
