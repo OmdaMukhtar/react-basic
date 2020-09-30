@@ -6,7 +6,7 @@
         import ReactDOM from "react-dom";
         import React from "react";
 
-        const element = <h2>Hello Snso team </h2>
+        const element = <h2>Hello developers team :) </h2>
 
         ReactDOM.render(
             element,
@@ -51,14 +51,14 @@
 
 4. ## Lifecycle 
     ### common :
-        * `componentDidMount`
-        * `componentWillUnmount`
+        * componentDidMount
+        * componentWillUnmount
 
     ### rest of the list
-        * `componentDidUpdate`
-        * `shouldComponentUpdate`
-        * `render`
-        * `getSnapshotBeforeUpdate`
+        * componentDidUpdate
+        * shouldComponentUpdate
+        * render
+        * getSnapshotBeforeUpdate
 
 
     #### Lifecycle Methods to a Class
@@ -117,6 +117,42 @@
             );
         }
     ```
+
+7. ## Forms
+    ```js
+        class NameForm extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value: ''};
+
+                this.handleChange = this.handleChange.bind(this);
+                this.handleSubmit = this.handleSubmit.bind(this);
+            }
+
+            handleChange(event) {
+                this.setState({value: event.target.value});
+            }
+
+            handleSubmit(event) {
+                alert('A name was submitted: ' + this.state.value);
+                event.preventDefault();
+            }
+
+            render() {
+                return (
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                        Name:
+                        <input type="text" value={this.state.value} onChange={this.handleChange} />
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
+                );
+            }
+        }
+    ```
+    - Exercies :
+        convert newform component class to the function component class
 
 6. ## Router in reactjs
 ```js
