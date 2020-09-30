@@ -1,9 +1,9 @@
 # Topics :
 
 ## Get start with react
-* JSX
+0. ### JSX
 
-```javascript
+```js
 
 import ReactDOM from "react-dom";
 import React from "react";
@@ -26,8 +26,75 @@ ReactDOM.render(
     color:#ffffff;
 }
 `
+
 2. ### styles use bootstrap from npm 
 ```import 'bootstrap/dist/css/bootstrap.css'```;
+
+3. ## Components and Props
+- through componant class base
+```js
+class Welcome extends React.Component {
+    render() {
+      return <h1>Hello, {this.props.nackName}</h1>;
+    }
+  }
+```
+
+- through functional component base
+```js
+function Welcome(props) {
+    return <h1>{props.nackName}</h1>
+}
+```
+
+4. ### Lifecycle 
+    ### common :
+        * `componentDidMount`
+        * `componentWillUnmount`
+
+    ### rest of the list
+        * `componentDidUpdate`
+        * `shouldComponentUpdate`
+        * `render`
+        * `getSnapshotBeforeUpdate`
+
+
+#### Lifecycle Methods to a Class
+```js
+
+```
+#### Lifecycle Methods to a Functional Component
+
+5. ### Handling Events
+```js
+constructor(props)
+{
+    super(props);
+    this.state = {title: props.title};
+    this.handleClick = this.handleClick.bind(this);
+}
+
+handleClick() {
+    console.log("clicked me..", this.state);
+}
+```
+
+=========== or use arraw function like so ===========
+```js
+handleClick = ()=>{
+    console.log("clicked me..", this.state);
+}
+```
+
+```jsx
+ render() { 
+        return ( 
+            <div>
+                <button onClick={this.handleClick} >Click Me</button>
+            </div>
+         );
+    }
+```
 
 
 ## Use Form request
@@ -47,37 +114,8 @@ ReactDOM.render(
 ## Normal function vs arraw functions
 
 ======== Normal function ==========================
-```javascript
 
-constructor(props)
-{
-    super(props);
-    this.state = {title: props.title};
-    this.handleClick = this.handleClick.bind(this);
-}
 
-handleClick() {
-    console.log("clicked me..", this.state);
-}
-```
-
-=========== or use arraw function like so ===========
-```javascript
-handleClick = ()=>{
-    console.log("clicked me..", this.state);
-}
-```
-
-## Lifecycle 
-### common :
-* `componentDidMount`
-* `componentWillUnmount`
-
-### rest of the list
-* `componentDidUpdate`
-* `shouldComponentUpdate`
-* `render`
-* `getSnapshotBeforeUpdate`
 
 # My thought
 - by using React Hook I thing there is no need for a statage mangement ?!
@@ -85,7 +123,7 @@ handleClick = ()=>{
 - Your thought reactjs vs vuejs
 - Redux vs Vuex
 
-# Something that i dit't find a time to know it:
+# Some tipics that I dit't find a time to know it:
 - Redux
 - What is .tsx
 
