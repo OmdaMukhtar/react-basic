@@ -66,6 +66,7 @@ function Welcome(props) {
 #### Lifecycle Methods to a Functional Component
 
 5. ### Handling Events
+    - #### Through Class Component
 ```js
 constructor(props)
 {
@@ -95,6 +96,23 @@ handleClick = ()=>{
          );
     }
 ```
+
+- #### Through Functional Component
+```js
+    function Welcome() {
+        function handleClick(e) {
+            e.preventDefault();
+            console.log('The link was clicked.');
+        }
+
+        return (
+            <a href="#" onClick={handleClick}>
+            Click me
+            </a>
+        );
+    }
+```
+
 
 
 ## Use Form request
