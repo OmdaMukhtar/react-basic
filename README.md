@@ -168,8 +168,8 @@
 9. ### How to use Hooks
     * [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
     * The most important thing in the hooks is these two methods :
-    * useState
-    * useEffect
+        - useState
+        - useEffect
 
 ## My thought
     - by using React Hook I thing there is no need for a statage mangement ?!
