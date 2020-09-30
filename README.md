@@ -270,27 +270,7 @@
         );
     ```
 
-8. ### Hook with context
-    ```js
-        import React, {useContext} from 'react';
-        
-        const ImplementHook = () => {
-            const {songs, addSong} = useContext(SongsContext);
 
-            return ( 
-                <div>
-                    <ul>
-                        {songs.map(song => {
-                            return (
-                                <li key={song.id}>{song.name}</li>
-                            );
-                        })}
-                    </ul>
-                    <button onClick={addSong}>add newSong</button>
-                </div>
-            );
-        }
-    ```
 
 9. ### How to use Hooks
     * [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
@@ -347,6 +327,29 @@
                 document.getElementById('root')
             );
         ```
+
+8. ### Hook with context
+    ```js
+        import React, {useContext} from 'react';
+        
+        const ImplementHook = () => {
+            const {songs, addSong} = useContext(SongsContext);
+
+            return ( 
+                <div>
+                    <ul>
+                        {songs.map(song => {
+                            return (
+                                <li key={song.id}>{song.name}</li>
+                            );
+                        })}
+                    </ul>
+                    <button onClick={addSong}>add newSong</button>
+                </div>
+            );
+        }
+    ```
+
 ## My thought
     - by using React Hook I thing there is no need for a statage mangement ?!
     - Componenet functional base it's better than componenet class base ?
@@ -356,6 +359,8 @@
 ## Some tipics that I dit't find a time to know it:
     - Redux
     - What is .tsx
+    - Reducers
+    - Router
     - How to call api
 
 
