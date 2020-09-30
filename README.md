@@ -168,18 +168,18 @@
     * useState
     * useEffect
 
-### My thought
+My thought
     - by using React Hook I thing there is no need for a statage mangement ?!
     - Componenet functional base it's better than componenet class base ?
     - Your thought reactjs vs vuejs
     - Redux vs Vuex
 
-### Some tipics that I dit't find a time to know it:
+Some tipics that I dit't find a time to know it:
     - Redux
     - What is .tsx
     - How to call api
 
 
-### References :
+References
     - [Net Ninga](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
     - [Bitfumes](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
