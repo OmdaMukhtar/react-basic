@@ -269,10 +269,27 @@
             document.getElementById('root')
         );
     ```
-    
+
 8. ### Hook with context
     ```js
+        import React, {useContext} from 'react';
+        
+        const ImplementHook = () => {
+            const {songs, addSong} = useContext(SongsContext);
 
+            return ( 
+                <div>
+                    <ul>
+                        {songs.map(song => {
+                            return (
+                                <li key={song.id}>{song.name}</li>
+                            );
+                        })}
+                    </ul>
+                    <button onClick={addSong}>add newSong</button>
+                </div>
+            );
+        }
     ```
 
 9. ### How to use Hooks
