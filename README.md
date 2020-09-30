@@ -114,6 +114,12 @@
 
         ```
     - #### Lifecycle Methods through a Functional Component
+        * using context
+        ```js
+
+        ```
+        
+        * using Hooks
         ```js
 
         ```

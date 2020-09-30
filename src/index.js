@@ -1,96 +1,51 @@
 import ReactDOM from "react-dom";
-import React, {useState} from "react";
+import React, {Component} from "react";
 
 
-
-function NameForm(props){
-    const [value, setValue] = useState();
-    
-    function handleChange(e){
-        console.log(e.target.value);
-        setValue(e.target.value);
+class MyImage extends Component {
+    constructor(props) {
+        super(props);
+        console.log('inital component');
     }
 
-    function handleSubmit(e){
-        console.log(value);
-        e.preventDefault();
+    componentDidMount(){
+        console.log('did mount');
     }
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Name:
-                <input type="text" value={value} onChange={handleChange} />
-            </label>
-            <input type="submit" value="Submit" />
-        </form>
-    );
-    
+    componentWillUnmount(){
+        console.log('component destroy');
+    }
+
+    render() { 
+        return ( 
+            <div>
+                <img src="https://www.elegantthemes.com/blog/wp-content/uploads/2018/04/Best-Code-and-Text-Editors.png"/>
+            </div>
+         );
+    }
 }
-// class NameForm extends React.Component {
-//     constructor(props) {
-//         super(props);
+ 
+class ImplementLifeCycle extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { isShow: false }
+    }
+    showImage = ()=>{
+        this.setState({isShow: !this.state.isShow});
+    }
 
-//         this.state = { value: 'default value' };
-//         this.handleChange = this.handleChange.bind(this);
-//         this.handleSubmit = this.handleSubmit.bind(this);
-//     }
-
-//     handleChange(event){
-//         this.setState({value: event.target.value});
-//     }
-
-//     handleSubmit(event){
-//         console.log("value = ", this.state.value);
-//         event.preventDefault();
-//     }
-
-//     render() {
-        // return (
-        //     <form onSubmit={this.handleSubmit}>
-        //         <label>
-        //             Name:
-        //             <input type="text" value={this.state.value} onChange={this.handleChange} />
-        //         </label>
-        //         <input type="submit" value="Submit" />
-        //     </form>
-        // );
-//     }
-// }
-
-// class NameForm extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {value: ''};
-
-//         this.handleChange = this.handleChange.bind(this);
-//         this.handleSubmit = this.handleSubmit.bind(this);
-//     }
-
-//     handleChange(event) {
-//         this.setState({value: event.target.value});
-//     }
-
-//     handleSubmit(event) {
-//         alert('A name was submitted: ' + this.state.value);
-//         event.preventDefault();
-//     }
-
-//     render() {
-//         return (
-//         <form onSubmit={this.handleSubmit}>
-//             <label>
-//                 Name:
-//                 <input type="text" value={this.state.value} onChange={this.handleChange} />
-//             </label>
-//             <input type="submit" value="Submit" />
-//         </form>
-//         );
-//     }
-// }
-
+    render() { 
+        return ( 
+            <div >
+                <button onClick={this.showImage}>show an image</button>
+                {this.state.isShow ? <MyImage /> : null}
+            </div>
+        );
+    }
+}
+ 
 
 ReactDOM.render(
-   <NameForm />,
+   <ImplementLifeCycle />,
     document.getElementById('root')
 );
