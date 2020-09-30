@@ -220,10 +220,59 @@
 
 9. ### How to use Hooks
     * [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
-    * The most important thing in the hooks is these two methods :
+    * The most important thing in the hooks is these three methods :
         - useState
         - useEffect
+        - useContext
+        
+    * Implement Hooks functions like so:
+        ```js
+            const ImplementHook = () => {
+                const [songs, setSongs] = useState([
+                    {id:1, name: 'Otwel'},
+                    {id:2, name: 'Omda'},
+                    {id:3, name: 'Nahid'},
+                ]);
 
+                const [age, setAge] = useState(10);
+
+                useEffect(()=>{
+                    console.log('effect hooks', songs);
+                }, [songs]);
+
+                
+                useEffect(()=>{
+                    console.log('effect hooks', age);
+                }, [age]);
+
+
+                const handlClick =()=>{
+                    setSongs([...songs, {id:4, name:'new song'}]);
+                }
+
+                return ( 
+                    <div>
+                        <ul>
+                            {songs.map(song => {
+                                return (
+                                    <li key={song.id}>{song.name}</li>
+                                );
+                            })}
+                        </ul>
+
+                        <button onClick={handlClick}>add newSong</button>
+                        <button onClick={() => {document.title = setAge(age+1)}}>add age</button>
+                    </div>
+                );
+            }
+        ```
+
+        ```jsx
+            ReactDOM.render(
+            <ImplementHook />,
+                document.getElementById('root')
+            );
+        ```
 ## My thought
     - by using React Hook I thing there is no need for a statage mangement ?!
     - Componenet functional base it's better than componenet class base ?
