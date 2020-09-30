@@ -1,53 +1,55 @@
 # Topics :
 
 ## Get start with react
-0. ### JSX
+0. ## JSX
+    ```js
+        import ReactDOM from "react-dom";
+        import React from "react";
 
-```js
+        const element = <h2>Hello Snso team </h2>
 
-import ReactDOM from "react-dom";
-import React from "react";
+        ReactDOM.render(
+            element,
+            document.getElementById('root')
+        );
+    ```
 
-const element = <h2>Hello Snso team </h2>
+1. ## styles use css
+    - ### Through style file
+    ```js
+        import './style.css
+    ```
+    - ### Style.css
+    ```css
+        .btn{
+            background-color: #0000ff;
+            color:#ffffff;
+        }
+    ```
 
-ReactDOM.render(
-    element,
-    document.getElementById('root')
-);
-
-```
-
-1. ### styles use css
-- ```import './style.css```
-- style.css
-``css
-.btn{
-    background-color: #0000ff;
-    color:#ffffff;
-}
-`
-
-2. ### styles use bootstrap from npm 
-```import 'bootstrap/dist/css/bootstrap.css'```;
+2. ## Styles use bootstrap from npm 
+    ```js
+    import 'bootstrap/dist/css/bootstrap.css';
+    ```
 
 3. ## Components and Props
-- through componant class base
-```js
-class Welcome extends React.Component {
-    render() {
-      return <h1>Hello, {this.props.nackName}</h1>;
+    - ### Through componant class base
+    ```js
+    class Welcome extends React.Component {
+        render() {
+        return <h1>Hello, {this.props.nackName}</h1>;
+        }
     }
-  }
-```
+    ```
 
-- through functional component base
-```js
-function Welcome(props) {
-    return <h1>{props.nackName}</h1>
-}
-```
+    - ### Through functional component base
+    ```js
+    function Welcome(props) {
+        return <h1>{props.nackName}</h1>
+    }
+    ```
 
-4. ### Lifecycle 
+4. ## Lifecycle 
     ### common :
         * `componentDidMount`
         * `componentWillUnmount`
@@ -59,59 +61,62 @@ function Welcome(props) {
         * `getSnapshotBeforeUpdate`
 
 
-#### Lifecycle Methods to a Class
-```js
+    #### Lifecycle Methods to a Class
+    ```js
 
-```
-#### Lifecycle Methods to a Functional Component
+    ```
+    #### Lifecycle Methods to a Functional Component
+    ```js
+
+    ```
 
 5. ### Handling Events
     - #### Through Class Component
-```js
-constructor(props)
-{
-    super(props);
-    this.state = {title: props.title};
-    this.handleClick = this.handleClick.bind(this);
-}
-
-handleClick() {
-    console.log("clicked me..", this.state);
-}
-```
-
-=========== or use arraw function like so ===========
-```js
-handleClick = ()=>{
-    console.log("clicked me..", this.state);
-}
-```
-
-```jsx
- render() { 
-        return ( 
-            <div>
-                <button onClick={this.handleClick} >Click Me</button>
-            </div>
-         );
-    }
-```
-
-- #### Through Functional Component
-```js
-    function Welcome() {
-        function handleClick(e) {
-            e.preventDefault();
-            console.log('The link was clicked.');
+    ```js
+        constructor(props)
+        {
+            super(props);
+            this.state = {title: props.title};
+            this.handleClick = this.handleClick.bind(this);
         }
 
-        return (
-            <a href="#" onClick={handleClick}>
-            Click me
-            </a>
-        );
-    }
-```
+        handleClick() {
+            console.log("clicked me..", this.state);
+        }
+    ```
+
+    =========== or use arraw function like so ===========
+    ```js
+        handleClick = ()=>{
+            console.log("clicked me..", this.state);
+        }
+    ```
+
+    ```jsx
+        render() { 
+            return ( 
+                <div>
+                    <button onClick={this.handleClick} >Click Me</button>
+                </div>
+            );
+        }
+    ```
+
+    - #### Through Functional Component
+    ```js
+        function Welcome() {
+            function handleClick(e) {
+                e.preventDefault();
+                console.log('The link was clicked.');
+            }
+
+            return (
+                <a href="#" onClick={handleClick}>
+                Click me
+                </a>
+            );
+        }
+    ```
 
 
 
