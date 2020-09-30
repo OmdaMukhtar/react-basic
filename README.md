@@ -207,13 +207,70 @@
     - Exercies :
         convert newform component class to the functional component class
 
-7. ### Router in reactjs
-    ```js
-
-    ```
-
 
 8. ### React Context
+    ```js
+        import React, {createContext, Component} from 'react';
+
+        export const SongsContext = createContext();
+
+        class SongsContextProvider extends Component {
+            state = { 
+                songs: [
+                    {id:12, name: 'Ali'},
+                    {id:13, name: 'Kali'},
+                    {id:14, name: 'Omer'},
+                ]
+            }
+            addSong =()=>{
+                var joined = this.state.songs.concat({id:122, name: 'Ommm'});
+                this.setState({ songs: joined })
+            }
+
+            render() { 
+                return ( 
+                    <SongsContext.Provider value={{songs:this.state.songs, addSong: this.addSong}}>
+                        {this.props.children}
+                    </SongsContext.Provider>
+                );
+            }
+        }
+        
+        export default SongsContextProvider;
+    ```
+
+    ```js
+        class ImplementHook extends Component {
+            static contextType = SongsContext;
+            
+            render() { 
+                const {songs, addSong} = this.context;
+                return ( 
+                    <div>
+                        <ul>
+                            {songs.map(song => {
+                                return (
+                                    <li key={song.id}>{song.name}</li>
+                                );
+                            })}
+                        </ul>
+                        <button onClick={addSong}>add newSong</button>
+                    </div>
+                );
+            }
+        }
+    ```
+
+    ```jsx
+        ReactDOM.render(
+            <SongsContextProvider>
+                <ImplementHook />
+            </SongsContextProvider>,
+            document.getElementById('root')
+        );
+    ```
+    
+8. ### Hook with context
     ```js
 
     ```
@@ -224,7 +281,7 @@
         - useState
         - useEffect
         - useContext
-        
+
     * Implement Hooks functions like so:
         ```js
             const ImplementHook = () => {
