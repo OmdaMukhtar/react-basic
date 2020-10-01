@@ -1,6 +1,6 @@
 # Topics :
 - Get start with react
-    1.  [JSX](#0JSX)
+    1.  [JSX](#JSX)
     2.  Styles use css && Styles use bootstrap from npm 
     3.  Components and Props
     4.  Lifecycle
