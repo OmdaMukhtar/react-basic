@@ -1,17 +1,17 @@
 # Topics :
-- Get start with react
+- [Get start with react](#get-start-with-react)
     1.  [JSX](#JSX)
-    2.  Styles use css && Styles use bootstrap from npm 
-    3.  Components and Props
-    4.  Lifecycle
-    5.  Handling Events
-    6.  Forms
-    7.  React Context
-    8.  How to use Hooks
-    9.  Hook with context
-- My thought
-- Some tipics that I dit't find a time to know it
-- Referencies
+    2.  [Styles use css && Styles use bootstrap from npm](#Styles)
+    3.  [Components and Props](#components-andprops)
+    4.  [Lifecycle](#lifecycle)
+    5.  [Handling Events](#handling-events)
+    6.  [Forms](#forms)
+    7.  [React Context](#react-context)
+    8.  [How to use Hooks](#how-to-use-hooks)
+    9.  [Hook with context](#hook-with-context)
+- [My thought](#my-thought)
+- [Some topics that I dit not find a time to know it](#some-topics-that-i-did-not-find-a-time-to-know-it)
+- [Referencies](#referencies)
 
 
 ## Get start with react
@@ -28,7 +28,7 @@
         );
     ```
 
-1. ### styles use css
+1. ### Styles
     - #### Through style file
         ```js
             import './style.css
@@ -41,13 +41,13 @@
             }
         ```
 
-2. ### Styles use bootstrap from npm 
-    - npm install bootstrap
-    ```js
-        import 'bootstrap/dist/css/bootstrap.css';
-    ```
+    - ### Styles use bootstrap from npm 
+        - npm install bootstrap
+        ```js
+            import 'bootstrap/dist/css/bootstrap.css';
+        ```
 
-3. ### Components and Props
+2. ### Components and Props
     - #### Through componant class base
         ```js
             class Welcome extends React.Component {
@@ -64,7 +64,7 @@
             }
         ```
 
-4. ### Lifecycle 
+3. ### Lifecycle 
     - #### common :
         * componentDidMount
         * componentWillUnmount
@@ -138,7 +138,7 @@
 
         ```
 
-5. ### Handling Events
+4. ### Handling Events
     - #### Through Class Component
         ```js
             constructor(props)
@@ -185,7 +185,7 @@
             }
         ```
 
-6. ### Forms
+5. ### Forms
     ```js
         class NameForm extends React.Component {
             constructor(props) {
@@ -222,7 +222,7 @@
         convert newform component class to the functional component class
 
 
-8. ### React Context
+6. ### React Context
     ```js
         import React, {createContext, Component} from 'react';
 
@@ -286,7 +286,7 @@
 
 
 
-9. ### How to use Hooks
+7. ### How to use Hooks
     * [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
     * The most important thing in the hooks is these three methods :
         - useState
@@ -370,14 +370,13 @@
     - Your thought reactjs vs vuejs
     - Redux vs Vuex
 
-## Some tipics that I dit't find a time to know it:
+## Some topics that I dit not find a time to know it
     - Redux
     - What is .tsx
     - Reducers
     - Router
     - How to call api
 
-
-## References
+## Referencies
     - [Net Ninga](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
     - [Bitfumes](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
