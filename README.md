@@ -1,4 +1,18 @@
 # Topics :
+- Get start with react
+    1.  JSX
+    2.  Styles use css && Styles use bootstrap from npm 
+    3.  Components and Props
+    4.  Lifecycle
+    5.  Handling Events
+    6.  Forms
+    7.  React Context
+    8.  How to use Hooks
+    9.  Hook with context
+- My thought
+- Some tipics that I dit't find a time to know it
+- Referencies
+
 
 ## Get start with react
 0. ### JSX
