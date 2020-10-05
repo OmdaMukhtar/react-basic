@@ -2,7 +2,7 @@
 - [Get start with react](#get-start-with-react)
     1.  [JSX](#JSX)
     2.  [Styles use css && Styles use bootstrap from npm](#Styles)
-    3.  [Components and Props](#components-andprops)
+    3.  [Components and Props](#components-and-props)
     4.  [Lifecycle](#lifecycle)
     5.  [Handling Events](#handling-events)
     6.  [Forms](#forms)
@@ -10,7 +10,7 @@
     8.  [How to use Hooks](#how-to-use-hooks)
     9.  [Hook with context](#hook-with-context)
 - [My thought](#my-thought)
-- [Some topics that I dit not find a time to know it](#some-topics-that-i-did-not-find-a-time-to-know-it)
+- [Some topics that I dit not find a time to know it](#some-topics-that-i-dit-not-find-a-time-to-know-it)
 - [Referencies](#referencies)
 
 
