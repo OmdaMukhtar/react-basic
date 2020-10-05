@@ -15,6 +15,15 @@
 
 
 ## Get start with react
+0. ### Requirements
+    - Node >= 8.10 
+    - NPM >= 5.6
+    
+0. ### Installation
+    - npx create-react-app my-app
+    - cd my-app
+    - npm start
+
 0. ### JSX
     ```js
         import ReactDOM from "react-dom";
