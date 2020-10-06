@@ -1,14 +1,16 @@
 # Topics :
 - [Get start with react](#get-start-with-react)
-    1.  [JSX](#JSX)
-    2.  [Styles use css && Styles use bootstrap from npm](#Styles)
-    3.  [Components and Props](#components-and-props)
-    4.  [Lifecycle](#lifecycle)
-    5.  [Handling Events](#handling-events)
-    6.  [Forms](#forms)
-    7.  [React Context](#react-context)
-    8.  [How to use Hooks](#how-to-use-hooks)
-    9.  [Hook with context](#hook-with-context)
+    1.  [Requirements](#requirements)
+    2.  [Installation](#installation)
+    3.  [JSX](#JSX)
+    4.  [Styles use css && Styles use bootstrap from npm](#Styles)
+    5.  [Components and Props](#components-and-props)
+    6.  [Lifecycle](#lifecycle)
+    7.  [Handling Events](#handling-events)
+    8.  [Forms](#forms)
+    9.  [React Context](#react-context)
+    10. [How to use Hooks](#how-to-use-hooks)
+    11. [Hook with context](#hook-with-context)
 - [My thought](#my-thought)
 - [Some topics that I dit not find a time to know it](#some-topics-that-i-dit-not-find-a-time-to-know-it)
 - [Referencies](#referencies)
@@ -18,7 +20,7 @@
 0. ### Requirements
     - Node >= 8.10 
     - NPM >= 5.6
-    
+
 0. ### Installation
     - npx create-react-app my-app
     - cd my-app
@@ -137,15 +139,7 @@
 
         ```
     - #### Lifecycle Methods through a Functional Component
-        * using context
-        ```js
-
-        ```
-        
-        * using Hooks
-        ```js
-
-        ```
+        - using Hooks
 
 4. ### Handling Events
     - #### Through Class Component
@@ -213,16 +207,17 @@
                 alert('A name was submitted: ' + this.state.value);
                 event.preventDefault();
             }
-
+    ```
+    ```jsx
             render() {
                 return (
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Name:
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />
-                    </label>
-                    <input type="submit" value="Submit" />
-                </form>
+                    <form onSubmit={this.handleSubmit}>
+                        <label>
+                            Name:
+                            <input type="text" value={this.state.value} onChange={this.handleChange} />
+                        </label>
+                        <input type="submit" value="Submit" />
+                    </form>
                 );
             }
         }
@@ -232,68 +227,120 @@
 
 
 6. ### React Context
-    ```js
-        import React, {createContext, Component} from 'react';
+    - ### Examples
+        ```js
+            import React, {createContext, Component} from 'react';
 
-        export const SongsContext = createContext();
+            export const SongsContext = createContext();
 
-        class SongsContextProvider extends Component {
-            state = { 
-                songs: [
-                    {id:12, name: 'Ali'},
-                    {id:13, name: 'Kali'},
-                    {id:14, name: 'Omer'},
-                ]
+            class SongsContextProvider extends Component {
+                state = { 
+                    songs: [
+                        {id:12, name: 'Ali'},
+                        {id:13, name: 'Kali'},
+                        {id:14, name: 'Omer'},
+                    ]
+                }
+                addSong =()=>{
+                    var joined = this.state.songs.concat({id:122, name: 'Ommm'});
+                    this.setState({ songs: joined })
+                }
+
+                render() { 
+                    return ( 
+                        <SongsContext.Provider value={{songs:this.state.songs, addSong: this.addSong}}>
+                            {this.props.children}
+                        </SongsContext.Provider>
+                    );
+                }
             }
-            addSong =()=>{
-                var joined = this.state.songs.concat({id:122, name: 'Ommm'});
-                this.setState({ songs: joined })
-            }
-
-            render() { 
-                return ( 
-                    <SongsContext.Provider value={{songs:this.state.songs, addSong: this.addSong}}>
-                        {this.props.children}
-                    </SongsContext.Provider>
-                );
-            }
-        }
-        
-        export default SongsContextProvider;
-    ```
-
-    ```js
-        class ImplementHook extends Component {
-            static contextType = SongsContext;
             
-            render() { 
-                const {songs, addSong} = this.context;
+            export default SongsContextProvider;
+        ```
+
+        ```js
+            class ImplementHook extends Component {
+                static contextType = SongsContext;
+                
+                render() { 
+                    const {songs, addSong} = this.context;
+                    return ( 
+                        <div>
+                            <ul>
+                                {songs.map(song => {
+                                    return (
+                                        <li key={song.id}>{song.name}</li>
+                                    );
+                                })}
+                            </ul>
+                            <button onClick={addSong}>add newSong</button>
+                        </div>
+                    );
+                }
+            }
+        ```
+
+        ```jsx
+            ReactDOM.render(
+                <SongsContextProvider>
+                    <ImplementHook />
+                </SongsContextProvider>,
+                document.getElementById('root')
+            );
+        ```
+
+    - #### Cosume multi context
+        ```js
+            class MyComponent extends Component {
+                render() { 
+                    return (  
+                        <FoodContext.Consumer>{(foodContext) => (
+                            <SongContext.Consumer>{(songsContext)=> {
+                                const { isFood, changeStatus } = foodContext;
+                                const { songs } = songsContext;
+
+                                return (
+                                    <div>
+                                        <h1>Hello developers </h1>
+                                        <h3>Food : {isFood ? 'true' : 'false'}</h3>
+                                        <button onClick={changeStatus}>change status</button>
+                                        <ul>
+                                            {songs.map(song => {
+                                                return (
+                                                    <li key={song.id}>{song.name}</li>
+                                                )
+                                            })}
+                                        </ul>
+                                    </div>
+                                )
+                            }}</SongContext.Consumer>
+                        )}</FoodContext.Consumer>
+                    );
+                }
+            }
+        ```
+
+    - #### Use context with functional component
+        ```js
+            const MyComponent = () => {
+                const {songs} = useContext(SongContext);
+                const {changeStatus, isFood} = useContext(FoodContext);
                 return ( 
                     <div>
+                        <h1>Hello developers </h1>
+                        <h3>Food : {isFood ? 'true' : 'false'}</h3>
+                        <button onClick={changeStatus}>change status</button>
                         <ul>
                             {songs.map(song => {
                                 return (
                                     <li key={song.id}>{song.name}</li>
-                                );
+                                )
                             })}
                         </ul>
-                        <button onClick={addSong}>add newSong</button>
                     </div>
                 );
             }
-        }
-    ```
-
-    ```jsx
-        ReactDOM.render(
-            <SongsContextProvider>
-                <ImplementHook />
-            </SongsContextProvider>,
-            document.getElementById('root')
-        );
-    ```
-
-
+        ```
 
 7. ### How to use Hooks
     * [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
@@ -387,8 +434,8 @@
     - How to call api
 
 ## Referencies
-- [Net Ninga](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
-- [Bitfumes](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Bitfumes](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
+- [Net Ninga (Context and Hooks)](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
 
 [Back](#topics)
