@@ -1,19 +1,9 @@
 # Topics :
-- [Get start with react](#get-start-with-react)
-    1.  [Requirements](#requirements)
-    2.  [Installation](#installation)
-    3.  [JSX](#JSX)
-    4.  [Styles use css && Styles use bootstrap from npm](#Styles)
-    5.  [Components and Props](#components-and-props)
-    6.  [Lifecycle](#lifecycle)
-    7.  [Handling Events](#handling-events)
-    8.  [Forms](#forms)
-    9.  [React Context](#react-context)
-    10. [How to use Hooks](#how-to-use-hooks)
-    11. [Hook with context](#hook-with-context)
-- [My thought](#my-thought)
-- [Some topics that I dit not find a time to know it](#some-topics-that-i-dit-not-find-a-time-to-know-it)
-- [Referencies](#referencies)
+- [Topics :](#topics-)
+  - [Get start with react](#get-start-with-react)
+  - [My thought](#my-thought)
+  - [Some topics that I dit not find a time to know it](#some-topics-that-i-dit-not-find-a-time-to-know-it)
+  - [Referencies](#referencies)
 
 
 ## Get start with react
@@ -419,11 +409,36 @@
             );
         }
     ```
-### Reactjs project structure
+9. ### React Router
+    - BrowserRouter
+    - Link
+    - Route
+    - NavLink
+    
+    #### Example
+        ```js
+            const NavBar = () => {
+                return ( 
+                    <div>
+                        <ul>
+                            <li><Link to="/home">Home</Link></li>
+                            <li><Link to="/about" >About us </Link></li>
+                        </ul>
+                        
+                        <Switch>
+                            <Route path="/home" component={Home}></Route>
+                            <Route path="/aboutd" component={About}></Route>
+                        </Switch>
+                    </div>
+                );
+            }
+        ```
+        
+10. ### Reactjs project structure
    ```bash
     .
     |-src
-        |+--- components
+        |- components
         |   |-component-name-folder
         |       |-component-name.js
         |       |-component-name.sass
@@ -452,5 +467,6 @@
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
 - [Bitfumes](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
 - [Net Ninga (Context and Hooks)](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
+- [Reactjs Router](https://reactrouter.com/web/guides/quick-start)
 
 [Back](#topics)
