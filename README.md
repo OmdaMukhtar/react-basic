@@ -419,7 +419,22 @@
             );
         }
     ```
+### Reactjs project structure
+   ```bash
+    .
+    |-src
+        |+--- components
+        |   |-component-name-folder
+        |       |-component-name.js
+        |       |-component-name.sass
+        |       |-component-name.styles.js
+        |       |-component-name-test.js
+        |       |-index.js
+        |-routes
+            |-index.js
+        |-index.js
 
+   ```
 ## My thought
     - by using React Hook I thing there is no need for a statage mangement ?!
     - Componenet functional base it's better than componenet class base ?
