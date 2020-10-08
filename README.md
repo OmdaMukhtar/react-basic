@@ -1,5 +1,4 @@
-# Topics :
-- ## [Topics :](#topics)
+* ## [Topics :](#)
   - [Get start with react](#get-start-with-react)
     1. [Requirements](#requirements)
     2. [Installation](#installation)
@@ -476,7 +475,6 @@
     - Redux
     - What is .tsx
     - Reducers
-    - Router
     - How to call api
 
 * ## Referencies
