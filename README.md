@@ -482,5 +482,6 @@
   - [Bitfumes](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
   - [Net Ninga (Context and Hooks)](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
   - [Reactjs Router](https://reactrouter.com/web/guides/quick-start)
+  - [React Structure Folders](https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145)
 
   - [Back](#topics)
