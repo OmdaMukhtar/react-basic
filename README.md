@@ -422,6 +422,51 @@
               );
           }
       ```
+  11. ### Building Your Own Hooks
+        ```js
+            import useFriendStatus from "./customeHooks/friends";
+
+            const App = () => {
+                const songs = useFriendStatus();
+
+                return ( 
+                    <div>
+                        <ul>
+                            {songs.map(song => {
+                                return (
+                                <li>{song.name}</li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                );
+            }
+
+
+
+            function useFriendStatus() {
+                const [songs, setSongs] = useState([
+                    {
+                        id:10,
+                        name: 'Owel City'
+                    },
+                    {
+                        id:11,
+                        name: 'Owel City2'
+                    }
+                ]);
+
+                useEffect(()=>{
+                    console.log('effect hooks');
+                }, []);
+                
+                return songs;
+            }
+
+            export default useFriendStatus;
+            
+        ```
+
   12. ### React Router
       - #### common elements
         - BrowserRouter
