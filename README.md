@@ -513,6 +513,58 @@
     14. ### Redux 
         - #### intro 
         - #### reducers 
+            ```js
+                const reducer = function(state={counter:0}, action){
+
+                    switch (action.type) {
+                        case "INC":{
+                            return state + action.payload;
+                        }
+                            
+                    }
+
+                    return state;
+                }
+
+                const store = createStore(reducer, {counter:0});
+                
+                store.subscribe(()=>{
+                    console.log("Store channged", store.getState());
+                });
+
+                store.dispatch({type:"INC", payload: 20});
+                store.dispatch({type:"INC", payload: 200});
+            ```
+
+        - ### multi reducers
+            ```js
+                import {combineReducers, createStore} from 'redux';
+
+                const userReducer = function(state = initalData, action){
+
+                    switch (action.type) {
+                        case "CHANGE_NAME":
+                            state.name = action.payload;
+                            break;
+                        case "CHANGE_EMAIL":
+                            state.email = action.payload;
+                            break;
+                    }
+
+                    return state;
+                };
+
+                const taskgReducer = function(state = {}, action){
+                    return state;
+                };
+
+                const reducers = combineReducers({
+                    user: userReducer,
+                    task: taskgReducer,
+                });
+
+                const store = createStore(reducers);
+            ```
         - #### middleware 
         - #### async actions 
         - #### connnect react with redux 
