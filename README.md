@@ -566,6 +566,18 @@
                 const store = createStore(reducers);
             ```
         - #### middleware 
+            ```js
+                import {applyMiddleware} from 'redux';
+                
+                const logger = (store)=>(next) => (action) => {
+                    next(action);
+                };
+
+                const middleware = applyMiddleware(logger);
+
+                const store = createStore(reducers, {}, middleware);
+
+            ```
         - #### async actions 
         - #### connnect react with redux 
         
