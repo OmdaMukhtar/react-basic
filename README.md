@@ -510,6 +510,13 @@
                   |-index.js
 
           ```
+    14. ### Redux 
+        - #### intro 
+        - #### reducers 
+        - #### middleware 
+        - #### async actions 
+        - #### connnect react with redux 
+        
 * ## My thought
     - by using React Hook I thing there is no need for a statage mangement ?!
     - Componenet functional base it's better than componenet class base ?
