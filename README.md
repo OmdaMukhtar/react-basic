@@ -583,16 +583,22 @@
                 -  Logger (```"redux-logger"```)
                 -  Thunk (```"redux-thunk"```)
                   ```js
-                      store.dispatch((dispatch) => {
+                      store.dispatch((dispatch)=>{
 
-                          // make dispatch
-                          dispatch({type:'INC', payload: 10});
-
-                          // you could also call an api to make asynchronize
-
-                      });
+                        Axios.get('https://jsonplaceholder.typicode.com/todos')
+                        .then(response => {
+                            dispatch({type:'FETCH_TASKS', payload:response.data});
+                            console.log(response.data);
+                        })
+                        .catch(error=>{
+                            dispatch({type:'ERROR', payload:error});
+                        })
+                    });
                   ```
                 - Promise (```"redux-promise-middleware"```)
+                    ```js
+                        
+                    ```
               
         - #### async actions 
         - #### connnect react with redux 
@@ -610,14 +616,14 @@
     - How to call api
 
 * ## Referencies
-  - ### Sites
-       - [React Documentation](https://reactjs.org/docs/getting-started.html)
-       - [Reactjs Router](https://reactrouter.com/web/guides/quick-start)
-       - [Redux](https://redux.js.org/introduction/getting-started)
-       - [React Structure Folders](https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145)
-  - ### Tutorials or Vedio
-       - [Bitfumes Vedio](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
-       - [Net Ninga (Context and Hooks) Tutorial](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
-       - [Redux Tutorail](https://www.youtube.com/watch?v=1w-oQ-i1XB8&list=PLoYCgNOIyGADILc3iUJzygCqC8Tt3bRXt)
+    - ### Sites
+         - [React Documentation](https://reactjs.org/docs/getting-started.html)
+         - [Reactjs Router](https://reactrouter.com/web/guides/quick-start)
+         - [Redux](https://redux.js.org/introduction/getting-started)
+         - [React Structure Folders](https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145)
+    - ### Tutorials or Vedio
+         - [Bitfumes Vedio](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
+         - [Net Ninga (Context and Hooks) Tutorial](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
+         - [Redux Tutorail](https://www.youtube.com/watch?v=1w-oQ-i1XB8&list=PLoYCgNOIyGADILc3iUJzygCqC8Tt3bRXt)
 
-  - [Back](#topics)
+    - [Back](#topics)
