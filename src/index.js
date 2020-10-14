@@ -1,51 +1,35 @@
-import ReactDOM from "react-dom";
-import React, {Component} from "react";
 
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-class MyImage extends Component {
-    constructor(props) {
-        super(props);
-        console.log('inital component');
-    }
+import store from './store';
+import {Provider} from 'react-redux';
+import App from './components/App';
 
-    componentDidMount(){
-        console.log('did mount');
-    }
+// connect((store)=>{
+//     return {
+//         tasks: store
+//     }
+// }, <App />)
 
-    componentWillUnmount(){
-        console.log('component destroy');
-    }
+// class App extends React.Component {
 
-    render() { 
-        return ( 
-            <div>
-                <img src="https://www.elegantthemes.com/blog/wp-content/uploads/2018/04/Best-Code-and-Text-Editors.png"/>
-            </div>
-         );
-    }
-}
- 
-class ImplementLifeCycle extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { isShow: false }
-    }
-    showImage = ()=>{
-        this.setState({isShow: !this.state.isShow});
-    }
+//     constructor(props){
+//         super(props);
+//     }
 
-    render() { 
-        return ( 
-            <div >
-                <button onClick={this.showImage}>show an image</button>
-                {this.state.isShow ? <MyImage /> : null}
-            </div>
-        );
-    }
-}
- 
+//     render() { 
+//         console.log(this.props);
+//         return ( 
+//             <div className="container">
+//                 Hello
+//             </div>
+//          );
+//     }
+// }
 
 ReactDOM.render(
-   <ImplementLifeCycle />,
-    document.getElementById('root')
-);
+    <Provider store={store}>
+        <App />
+    </Provider>, 
+document.getElementById('root'))

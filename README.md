@@ -511,8 +511,7 @@
 
           ```
     14. ### Redux 
-        - #### intro 
-        - #### reducers 
+        - #### Reducers 
             ```js
                 const reducer = function(state={counter:0}, action){
 
@@ -536,7 +535,7 @@
                 store.dispatch({type:"INC", payload: 200});
             ```
 
-        - ### multi reducers
+        - #### Multi reducers
             ```js
                 import {combineReducers, createStore} from 'redux';
 
@@ -565,8 +564,8 @@
 
                 const store = createStore(reducers);
             ```
-        - #### middleware 
-            - ##### Example 
+        - #### Middlewares 
+            - ###### Example 
                 ```js
                     import {applyMiddleware} from 'redux';
 
@@ -606,8 +605,119 @@
                         payload: Axios.get('https://jsonplaceholder.typicode.com/todos')
                     });
                 ```
-        
-        - #### connnect react with redux 
+        - #### Structerd Redux Folders
+            - ##### example
+                ```
+                    |-src
+                        |-components
+                        |-actions
+                            |-userActoins.js
+                            |-postActions.js
+                        |-reducers
+                            |-userReducer.js
+                            |-postReducer.js
+                            |-index.js
+                        |-store.js
+                ```
+            - ##### store.js
+                ```js
+                    import {applayMiddleware, createStore } from 'redux';
+                    import reducers from './reducers';
+                    import promise from 'redux-promise-middleware';
+                    import thunk from 'redux-thunk';
+                    import logger from 'redux-logger';
+
+                    const middlewares = applayMiddleware(promise, thunk, logger);
+
+                    export default createStore(reducers, middlewares);
+                ```
+            - ##### reducer/index.js
+                ```js
+                    import {compineReducers} from 'redux';
+                    import taskReducer from './taskReducer';
+
+                    export default compineReducers({
+                        taskReducer
+                    });
+                ```
+            - ##### reducers/taskReducer.js
+                ```js
+                    export default function reducer(state = {tasks: [], error: null}, action){
+                        switch (action.type) {
+                            case "FETCH_TASKS_PENDDING":{
+                                return {...state, tasks: action.payload};
+                            }
+                            case "FETCH_TASKS_FULFILLED":{
+                                return {...state, tasks: action.payload.data};
+                            }
+                            case "ADD_TASK":{
+                                return {...state, tasks: state.tasks.concat(action.payload)};
+                            }
+                            case "GET_TASK":{
+                                return {...state, tasks: state.tasks.find(action.payload.id)};
+                            }
+                            case "FETCH_TASKS_REJECTED":
+                                return {...state, error: action.payload};
+                        }
+
+                        return state;
+                    };
+                ```
+            - ##### actions/taskActions.js
+                ```js
+                    import Axios from "axios"
+
+                    export function fetchTasks(){
+                        return function(dispatch) => {
+                            return Axios.get()
+                                .then(response =>{
+                                    dispatch({type:'FETCH_TASK_FULFILL', payload:reponse.data});
+                                })
+                                .catch(error =>{
+                                    dispatch({type:'FETCH_TASK_REJECTED', payload:error});
+                                });
+                        }
+                    }
+
+                    export function addTask(id, name, complete){
+                        return {
+                            type:'ADD_TASK',
+                            payload:{
+                                id,
+                                name,
+                                complete
+                            }
+                        }
+                    }
+                ```
+        - #### Connnect a Component React with Redux
+            - use connect with mapStatToProps
+                ```js
+                    const mapStateToProps = state =>{
+                        return {
+                            task: state.task,
+                            user: state.user
+                        }
+                    };
+
+                    class App extends React.Component
+                    {
+                        render() { 
+                            console.log(this.props);
+                            return ( 
+                                <div className="container">
+                                    Hello, Omda
+                                </div>
+                            );
+                        }
+                    }
+
+                    export default connect(mapStateToProps, (App);
+                ```
+            - use connect with mapDispatchToProps
+                ```js
+
+                ```
         
 * ## My thought
     - by using React Hook I thing there is no need for a statage mangement ?!
