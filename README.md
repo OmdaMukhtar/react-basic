@@ -1,4 +1,4 @@
-* ## [Topics :](#)
+* ## [Topics :](#topics)
   - [Get start with react](#get-start-with-react)
     1. [Requirements](#requirements)
     2. [Installation](#installation)
@@ -580,8 +580,19 @@
 
                 ```
             - ##### Common Middlewares
-              -  Logger
-              -  Thunk
+                -  Logger (```"redux-logger"```)
+                -  Thunk (```"redux-thunk"```)
+                  ```js
+                      store.dispatch((dispatch) => {
+
+                          // make dispatch
+                          dispatch({type:'INC', payload: 10});
+
+                          // you could also call an api to make asynchronize
+
+                      });
+                  ```
+                - Promise (```"redux-promise-middleware"```)
               
         - #### async actions 
         - #### connnect react with redux 
@@ -599,11 +610,14 @@
     - How to call api
 
 * ## Referencies
-  - [React Documentation](https://reactjs.org/docs/getting-started.html)
-  - [Bitfumes](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
-  - [Net Ninga (Context and Hooks)](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
-  - [Reactjs Router](https://reactrouter.com/web/guides/quick-start)
-  - [React Structure Folders](https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145)
-  - [Redux](https://redux.js.org/introduction/getting-started)
+  - ### Sites
+       - [React Documentation](https://reactjs.org/docs/getting-started.html)
+       - [Reactjs Router](https://reactrouter.com/web/guides/quick-start)
+       - [Redux](https://redux.js.org/introduction/getting-started)
+       - [React Structure Folders](https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145)
+  - ### Tutorials or Vedio
+       - [Bitfumes Vedio](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
+       - [Net Ninga (Context and Hooks) Tutorial](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
+       - [Redux Tutorail](https://www.youtube.com/watch?v=1w-oQ-i1XB8&list=PLoYCgNOIyGADILc3iUJzygCqC8Tt3bRXt)
 
   - [Back](#topics)
