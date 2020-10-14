@@ -566,18 +566,23 @@
                 const store = createStore(reducers);
             ```
         - #### middleware 
-            ```js
-                import {applyMiddleware} from 'redux';
+            - ##### Example 
+                ```js
+                    import {applyMiddleware} from 'redux';
 
-                const logger = (store)=>(next) => (action) => {
-                    next(action);
-                };
+                    const logger = (store)=>(next) => (action) => {
+                        next(action);
+                    };
 
-                const middleware = applyMiddleware(logger);
+                    const middleware = applyMiddleware(logger);
 
-                const store = createStore(reducers, {}, middleware);
+                    const store = createStore(reducers, {}, middleware);
 
-            ```
+                ```
+            - ##### Common Middlewares
+              -  Logger
+              -  Thunk
+              
         - #### async actions 
         - #### connnect react with redux 
         
