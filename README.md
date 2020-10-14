@@ -596,11 +596,17 @@
                     });
                   ```
                 - Promise (```"redux-promise-middleware"```)
-                    ```js
-                        
-                    ```
-              
+                              
         - #### async actions 
+            - Use example of the middleware ```Thunk```
+            - Use Promise middelware
+                ```js
+                    store.dispatch({
+                        type: "FETCH_TASKS",
+                        payload: Axios.get('https://jsonplaceholder.typicode.com/todos')
+                    });
+                ```
+        
         - #### connnect react with redux 
         
 * ## My thought
