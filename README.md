@@ -683,13 +683,13 @@
 
                     export function fetchTasks(){
                         return function(dispatch) => {
-                            return Axios.get()
-                                .then(response =>{
-                                    dispatch({type:'FETCH_TASK_FULFILL', payload:reponse.data});
-                                })
-                                .catch(error =>{
-                                    dispatch({type:'FETCH_TASK_REJECTED', payload:error});
-                                });
+                            Axios.get()
+                            .then(response =>{
+                                dispatch({type:'FETCH_TASK_FULFILL', payload:reponse.data});
+                            })
+                            .catch(error =>{
+                                dispatch({type:'FETCH_TASK_REJECTED', payload:error});
+                            });
                         }
                     }
 
