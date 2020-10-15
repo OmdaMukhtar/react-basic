@@ -685,10 +685,10 @@
                         return function(dispatch) => {
                             Axios.get()
                             .then(response =>{
-                                dispatch({type:'FETCH_TASK_FULFILL', payload:reponse.data});
+                                dispatch({type:'FETCH_TASKS_FULFILLED', payload:reponse.data});
                             })
                             .catch(error =>{
-                                dispatch({type:'FETCH_TASK_REJECTED', payload:error});
+                                dispatch({type:'FETCH_TASKS_REJECTED', payload:error});
                             });
                         }
                     }
