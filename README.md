@@ -608,7 +608,45 @@
                 ```
         
         - #### connnect react with redux 
-        
+             - use connect with mapStatToProps
+                ```js
+                    const mapStateToProps = state =>{
+                        return {
+                            task: state.task,
+                            user: state.user
+                        }
+                    };
+
+                    class App extends React.Component
+                    {
+                        render() { 
+                            console.log(this.props);
+                            return ( 
+                                <div className="container">
+                                    Hello, Omda
+                                </div>
+                            );
+                        }
+                    }
+
+                    export default connect(mapStateToProps, (App);
+                ```
+            - use connect with mapDispatchToProps
+                ```js
+                    
+                
+                    class App extends React.Component
+                    {
+                        render() { 
+                            console.log(this.props.dispatch(fetchTasks()));
+                            return ( 
+                                <div className="container">
+                                    Hello, Omda
+                                </div>
+                            );
+                        }
+                    }
+                ```
 * ## My thought
     - by using React Hook I thing there is no need for a statage mangement ?!
     - Componenet functional base it's better than componenet class base ?
