@@ -1,4 +1,4 @@
-* ## [Topics :](#topics)
+* ## [Topics](#topics)
   - [Get start with react](#get-start-with-react)
     1. [Requirements](#requirements)
     2. [Installation](#installation)
@@ -353,7 +353,6 @@
           ```
 
   10. ### How to use Hooks
-      * [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
       * The most important thing in the hooks is these three methods :
           - useState
           - useEffect
@@ -762,7 +761,8 @@
          - [React Documentation](https://reactjs.org/docs/getting-started.html)
          - [Reactjs Router](https://reactrouter.com/web/guides/quick-start)
          - [Redux](https://redux.js.org/introduction/getting-started)
-         - [React Structure Folders](https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145)
+         - [React Structure Folders](https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications-f3e35ad0a145) 
+         - [Link to the post](https://dev.to/dan_abramov/making-sense-of-react-hooks-2eib)
     - ### Tutorials or Vedio
          - [Bitfumes Vedio](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
          - [Net Ninga (Context and Hooks) Tutorial](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
