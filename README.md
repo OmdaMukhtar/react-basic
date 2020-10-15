@@ -476,6 +476,13 @@
       
       - #### Example
           ```js
+              import {
+                BrowserRouter as Router,
+                Switch,
+                Route,
+                Link
+              } from "react-router-dom";
+
               const NavBar = () => {
                   return ( 
                       <div>
@@ -510,7 +517,7 @@
                   |-index.js
 
           ```
-    14. ### Redux 
+    1.  ### Redux 
         - #### intro 
         - #### reducers 
             ```js
@@ -582,22 +589,22 @@
             - ##### Common Middlewares
                 -  Logger (```"redux-logger"```)
                 -  Thunk (```"redux-thunk"```)
-                  ```js
-                      store.dispatch((dispatch)=>{
+                    ```js
+                            store.dispatch((dispatch)=>{
 
-                        Axios.get('https://jsonplaceholder.typicode.com/todos')
-                        .then(response => {
-                            dispatch({type:'FETCH_TASKS', payload:response.data});
-                            console.log(response.data);
-                        })
-                        .catch(error=>{
-                            dispatch({type:'ERROR', payload:error});
-                        })
-                    });
-                  ```
+                            Axios.get('https://jsonplaceholder.typicode.com/todos')
+                            .then(response => {
+                                dispatch({type:'FETCH_TASKS', payload:response.data});
+                                console.log(response.data);
+                            })
+                            .catch(error=>{
+                                dispatch({type:'ERROR', payload:error});
+                            })
+                        });
+                    ```
                 - Promise (```"redux-promise-middleware"```)
                               
-        - #### async actions 
+        - #### Async actions 
             - Use example of the middleware ```Thunk```
             - Use Promise middelware
                 ```js
@@ -607,8 +614,8 @@
                     });
                 ```
         
-        - #### connnect react with redux 
-             - use connect with mapStatToProps
+        - #### Connnect react with redux 
+             - Use connect with mapStatToProps
                 ```js
                     const mapStateToProps = state =>{
                         return {
@@ -631,7 +638,7 @@
 
                     export default connect(mapStateToProps, (App);
                 ```
-            - use connect with mapDispatchToProps
+            - Use connect with mapDispatchToProps
                 ```js
                     
                 
