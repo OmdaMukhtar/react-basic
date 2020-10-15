@@ -13,6 +13,12 @@
     11. [Hook with context](#hook-with-context)
     12. [React Router](#react-router)
     13. [Reactjs project structure](#reactjs-project-structure)
+    14. [Redux](#redux)
+        * [Reducers ](#reducers)
+        * [Multi reducers](#multi-reducers)
+        * [Middleware ](#Middleware)
+        * [Async actions ](#async-actions)
+        * [Connnect react with redux  ](#connnect-react-with-redux)
   - [My thought](#my-thought)
   - [Some topics that I dit not find a time to know it](#some-topics-that-I-dit-not-find-a-time-to-know-it)
   - [Referencies](#referencies)
@@ -422,7 +428,7 @@
               );
           }
       ```
-  11. ### Building Your Own Hooks
+  12. ### Building Your Own Hooks
         ```js
             import useFriendStatus from "./customeHooks/friends";
 
@@ -467,7 +473,7 @@
             
         ```
 
-  12. ### React Router
+  13. ### React Router
       - #### common elements
         - BrowserRouter
         - Link
@@ -500,7 +506,7 @@
               }
           ```
           
-  13. ### Reactjs project structure
+  14. ### Reactjs project structure
       - #### Example
           ```bash
               .
@@ -517,8 +523,7 @@
                   |-index.js
 
           ```
-    1.  ### Redux 
-        - #### intro 
+  15.  ### Redux 
         - #### reducers 
             ```js
                 const reducer = function(state={counter:0}, action){
@@ -590,7 +595,7 @@
                 -  Logger (```"redux-logger"```)
                 -  Thunk (```"redux-thunk"```)
                     ```js
-                            store.dispatch((dispatch)=>{
+                        store.dispatch((dispatch)=>{
 
                             Axios.get('https://jsonplaceholder.typicode.com/todos')
                             .then(response => {
@@ -663,8 +668,7 @@
 * ## Some topics that I dit not find a time to know it
     - Redux
     - What is .tsx
-    - Reducers
-    - How to call api
+    - Reducers with Hooks
 
 * ## Referencies
     - ### Sites
