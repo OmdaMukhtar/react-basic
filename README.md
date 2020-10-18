@@ -501,9 +501,9 @@
                   |- components
                   |   |-component-name-folder
                   |       |-component-name.js
-                  |       |-component-name.sass
                   |       |-component-name.styles.js
                   |       |-component-name-test.js
+                  |       |-component-name-Api.js
                   |       |-index.js
                   |-routes
                       |-index.js
