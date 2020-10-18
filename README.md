@@ -789,5 +789,6 @@
          - [Bitfumes Vedio](https://www.youtube.com/watch?v=I6tbhNUU96Y&t=7310s)
          - [Net Ninga (Context and Hooks) Tutorial](https://www.youtube.com/watch?v=rDVe6pmeAjo&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&index=12)
          - [Redux Tutorail](https://www.youtube.com/watch?v=1w-oQ-i1XB8&list=PLoYCgNOIyGADILc3iUJzygCqC8Tt3bRXt)
+         - [Acadmind (connect redux to a component)](https://www.youtube.com/watch?v=tfuZ7uZmVyg&t=637s)
 
     - [Back](#topics)
