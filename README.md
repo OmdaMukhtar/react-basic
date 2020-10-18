@@ -505,6 +505,28 @@
                   );
               }
           ```
+      - #### Send parameter through router
+            ```js
+                const Home = (props) => {
+                    return <h2>Home page `your ID is ${props.match.params.id}`</h2>;
+                }
+
+                const NavBar = () => {
+                  return ( 
+                      <div>
+                          <ul>
+                              <li><Link to="/home/200">Home</Link></li>
+                              <li><Link to="/about" >About us </Link></li>
+                          </ul>
+                          
+                          <Switch>
+                              <Route path="/home/:id" component={Home}></Route>
+                              <Route path="/aboutd" component={About}></Route>
+                          </Switch>
+                      </div>
+                  );
+              }
+            ```
           
   14. ### Reactjs project structure
       - #### Example
