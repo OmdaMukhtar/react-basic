@@ -479,54 +479,54 @@
         - Link
         - Route
         - NavLink
-      
+
       - #### Example
-          ```js
-              import {
+        ```js
+            import {
                 BrowserRouter as Router,
                 Switch,
                 Route,
                 Link
-              } from "react-router-dom";
+            } from "react-router-dom";
 
-              const NavBar = () => {
-                  return ( 
-                      <div>
-                          <ul>
-                              <li><Link to="/home">Home</Link></li>
-                              <li><Link to="/about" >About us </Link></li>
-                          </ul>
-                          
-                          <Switch>
-                              <Route path="/home" component={Home}></Route>
-                              <Route path="/aboutd" component={About}></Route>
-                          </Switch>
-                      </div>
-                  );
-              }
-          ```
+            const NavBar = () => {
+                return ( 
+                    <div>
+                        <ul>
+                            <li><Link to="/home">Home</Link></li>
+                            <li><Link to="/about" >About us </Link></li>
+                        </ul>
+                        
+                        <Switch>
+                            <Route path="/home" component={Home}></Route>
+                            <Route path="/aboutd" component={About}></Route>
+                        </Switch>
+                    </div>
+                );
+            }
+        ```
       - #### Send parameter through router
-            ```js
-                const Home = (props) => {
-                    return <h2>Home page `your ID is ${props.match.params.id}`</h2>;
-                }
+        ```js
+            const Home = (props) => {
+                return <h2>Home page `your ID is ${props.match.params.id}`</h2>;
+            }
 
-                const NavBar = () => {
-                  return ( 
-                      <div>
-                          <ul>
-                              <li><Link to="/home/200">Home</Link></li>
-                              <li><Link to="/about" >About us </Link></li>
-                          </ul>
-                          
-                          <Switch>
-                              <Route path="/home/:id" component={Home}></Route>
-                              <Route path="/aboutd" component={About}></Route>
-                          </Switch>
-                      </div>
-                  );
-              }
-            ```
+            const NavBar = () => {
+            return ( 
+                <div>
+                    <ul>
+                        <li><Link to="/home/200">Home</Link></li>
+                        <li><Link to="/about" >About us </Link></li>
+                    </ul>
+                    
+                    <Switch>
+                        <Route path="/home/:id" component={Home}></Route>
+                        <Route path="/aboutd" component={About}></Route>
+                    </Switch>
+                </div>
+                );
+            }
+        ```
           
   14. ### Reactjs project structure
       - #### Example
