@@ -6,7 +6,7 @@
     4. [Styles](#Styles)
     5. [Components and Props](#components-and-props)
     6. [Lifecycle](#lifecycle)
-    7. [Handling Events](#eandling-events)
+    7. [Handling Events](#handling-events)
     8. [Forms](#forms)
     9. [React Context](#react-context)
     10. [How to use Hooks](#how-to-use-hooks)
@@ -774,7 +774,6 @@
     - Redux vs Vuex
 
 * ## Some topics that I dit not find a time to know it
-    - Redux
     - What is .tsx
     - Reducers with Hooks
 
